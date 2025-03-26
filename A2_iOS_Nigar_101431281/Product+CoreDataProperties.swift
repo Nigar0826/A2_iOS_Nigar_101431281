@@ -10,10 +10,10 @@ import Foundation
 import CoreData
 
 
-extension Product {
+extension ProductEntity {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Product> {
-        return NSFetchRequest<Product>(entityName: "Product")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<ProductEntity> {
+        return NSFetchRequest<ProductEntity>(entityName: "Product")
     }
 
     @NSManaged public var id: UUID?
@@ -24,6 +24,6 @@ extension Product {
 
 }
 
-extension Product : Identifiable {
+extension ProductEntity : Identifiable {
 
 }
