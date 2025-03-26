@@ -46,6 +46,11 @@ struct PersistenceController {
                     ("iPhone 15 Pro Max", "Flagship iPhone with triple camera system", 1599.99, "Apple"),
                     ("iPad Air", "Ultra-light tablet with M1 chip", 899.99, "Apple"),
                     ("Apple Watch Ultra", "Rugged smartwatch with advanced sensors", 1099.99, "Apple"),
+                    ("AirPods Max", "Premium over-ear noise-cancelling headphones", 779.99, "Apple"),
+                    ("HomePod Mini", "Smart speaker with Siri integration", 129.99, "Apple"),
+                    ("Magic Keyboard", "Wireless keyboard with Touch ID", 199.99, "Apple"),
+                    ("Apple Pencil (2nd Gen)", "Precision stylus for iPad Pro and Air", 169.99, "Apple"),
+                    ("Studio Display", "5K Retina monitor with aluminum enclosure", 1999.99, "Apple")
                 ]
 
                 for (name, description, price, provider) in sampleProducts {
