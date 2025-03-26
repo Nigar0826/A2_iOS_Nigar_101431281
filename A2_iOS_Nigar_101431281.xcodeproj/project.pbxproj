@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		767AC2ED2D94686200C745DA /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC2EB2D94686200C745DA /* Product+CoreDataClass.swift */; };
+		767AC2EE2D94686200C745DA /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC2EC2D94686200C745DA /* Product+CoreDataProperties.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		767AC2D52D944A2600C745DA /* A2_iOS_Nigar_101431281.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = A2_iOS_Nigar_101431281.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		767AC2EB2D94686200C745DA /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataClass.swift"; path = "A2_iOS_Nigar_101431281/Product+CoreDataClass.swift"; sourceTree = "<group>"; };
+		767AC2EC2D94686200C745DA /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataProperties.swift"; path = "A2_iOS_Nigar_101431281/Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +39,8 @@
 		767AC2CC2D944A2600C745DA = {
 			isa = PBXGroup;
 			children = (
+				767AC2EB2D94686200C745DA /* Product+CoreDataClass.swift */,
+				767AC2EC2D94686200C745DA /* Product+CoreDataProperties.swift */,
 				767AC2D72D944A2600C745DA /* A2_iOS_Nigar_101431281 */,
 				767AC2D62D944A2600C745DA /* Products */,
 			);
@@ -119,6 +128,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				767AC2ED2D94686200C745DA /* Product+CoreDataClass.swift in Sources */,
+				767AC2EE2D94686200C745DA /* Product+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
