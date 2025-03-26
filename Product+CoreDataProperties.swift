@@ -18,8 +18,8 @@ extension ProductEntity {
 
     @NSManaged public var id: UUID?
     @NSManaged public var name: String?
-    @NSManaged public var productDescription: String?
     @NSManaged public var price: String?
+    @NSManaged public var productDescription: String?
     @NSManaged public var provider: String?
 
 }

@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		767AC2ED2D94686200C745DA /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC2EB2D94686200C745DA /* Product+CoreDataClass.swift */; };
-		767AC2EE2D94686200C745DA /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC2EC2D94686200C745DA /* Product+CoreDataProperties.swift */; };
+		766478872D948D7700368179 /* A2_iOS_Nigar_101431281.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 76AFBD492D9486D9000C9BD7 /* A2_iOS_Nigar_101431281.xcdatamodeld */; };
+		76AFBD3B2D948123000C9BD7 /* A2_iOS_Nigar_101431281App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AFBD3A2D948123000C9BD7 /* A2_iOS_Nigar_101431281App.swift */; };
+		76AFBD3D2D94816C000C9BD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76AFBD3C2D94816C000C9BD7 /* Assets.xcassets */; };
+		76AFBD3F2D94817E000C9BD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AFBD3E2D94817E000C9BD7 /* ContentView.swift */; };
+		76AFBD412D94818B000C9BD7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AFBD402D94818B000C9BD7 /* Persistence.swift */; };
+		76AFBD4E2D9489AF000C9BD7 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AFBD4C2D9489AF000C9BD7 /* Product+CoreDataClass.swift */; };
+		76AFBD4F2D9489AF000C9BD7 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AFBD4D2D9489AF000C9BD7 /* Product+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		767AC2D52D944A2600C745DA /* A2_iOS_Nigar_101431281.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = A2_iOS_Nigar_101431281.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		767AC2EB2D94686200C745DA /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataClass.swift"; path = "A2_iOS_Nigar_101431281/Product+CoreDataClass.swift"; sourceTree = "<group>"; };
-		767AC2EC2D94686200C745DA /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataProperties.swift"; path = "A2_iOS_Nigar_101431281/Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		76AFBD3A2D948123000C9BD7 /* A2_iOS_Nigar_101431281App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A2_iOS_Nigar_101431281App.swift; sourceTree = "<group>"; };
+		76AFBD3C2D94816C000C9BD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76AFBD3E2D94817E000C9BD7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		76AFBD402D94818B000C9BD7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		76AFBD4A2D9486D9000C9BD7 /* A2_iOS_Nigar_101431281.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = A2_iOS_Nigar_101431281.xcdatamodel; sourceTree = "<group>"; };
+		76AFBD4C2D9489AF000C9BD7 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
+		76AFBD4D2D9489AF000C9BD7 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		767AC2D72D944A2600C745DA /* A2_iOS_Nigar_101431281 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = A2_iOS_Nigar_101431281;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		767AC2D22D944A2600C745DA /* Frameworks */ = {
@@ -39,10 +41,14 @@
 		767AC2CC2D944A2600C745DA = {
 			isa = PBXGroup;
 			children = (
-				767AC2EB2D94686200C745DA /* Product+CoreDataClass.swift */,
-				767AC2EC2D94686200C745DA /* Product+CoreDataProperties.swift */,
-				767AC2D72D944A2600C745DA /* A2_iOS_Nigar_101431281 */,
+				76AFBD4C2D9489AF000C9BD7 /* Product+CoreDataClass.swift */,
+				76AFBD4D2D9489AF000C9BD7 /* Product+CoreDataProperties.swift */,
+				76AFBD402D94818B000C9BD7 /* Persistence.swift */,
+				76AFBD3E2D94817E000C9BD7 /* ContentView.swift */,
+				76AFBD3C2D94816C000C9BD7 /* Assets.xcassets */,
+				76AFBD3A2D948123000C9BD7 /* A2_iOS_Nigar_101431281App.swift */,
 				767AC2D62D944A2600C745DA /* Products */,
+				76AFBD492D9486D9000C9BD7 /* A2_iOS_Nigar_101431281.xcdatamodeld */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,9 +75,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				767AC2D72D944A2600C745DA /* A2_iOS_Nigar_101431281 */,
-			);
 			name = A2_iOS_Nigar_101431281;
 			packageProductDependencies = (
 			);
@@ -91,6 +94,7 @@
 				TargetAttributes = {
 					767AC2D42D944A2600C745DA = {
 						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
 					};
 				};
 			};
@@ -118,6 +122,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				766478872D948D7700368179 /* A2_iOS_Nigar_101431281.xcdatamodeld in Resources */,
+				76AFBD3D2D94816C000C9BD7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,8 +134,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				767AC2ED2D94686200C745DA /* Product+CoreDataClass.swift in Sources */,
-				767AC2EE2D94686200C745DA /* Product+CoreDataProperties.swift in Sources */,
+				76AFBD412D94818B000C9BD7 /* Persistence.swift in Sources */,
+				76AFBD3F2D94817E000C9BD7 /* ContentView.swift in Sources */,
+				76AFBD4E2D9489AF000C9BD7 /* Product+CoreDataClass.swift in Sources */,
+				76AFBD4F2D9489AF000C9BD7 /* Product+CoreDataProperties.swift in Sources */,
+				76AFBD3B2D948123000C9BD7 /* A2_iOS_Nigar_101431281App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,9 +269,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"A2_iOS_Nigar_101431281/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -278,6 +288,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nigar-labtest2is-eve.A2-iOS-Nigar-101431281";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,9 +299,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"A2_iOS_Nigar_101431281/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -333,6 +345,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		76AFBD492D9486D9000C9BD7 /* A2_iOS_Nigar_101431281.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				76AFBD4A2D9486D9000C9BD7 /* A2_iOS_Nigar_101431281.xcdatamodel */,
+			);
+			currentVersion = 76AFBD4A2D9486D9000C9BD7 /* A2_iOS_Nigar_101431281.xcdatamodel */;
+			path = A2_iOS_Nigar_101431281.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 767AC2CD2D944A2600C745DA /* Project object */;
 }
