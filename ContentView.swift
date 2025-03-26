@@ -18,26 +18,40 @@ struct ContentView: View {
     )
     private var products: FetchedResults<ProductEntity>
 
-    @State private var currentIndex: Int = 0
+    @State private var currentIndex = 0
+    @State private var searchText = ""
+
+    private var filteredProducts: [ProductEntity] {
+        if searchText.isEmpty {
+            return Array(products)
+        } else {
+            return products.filter {
+                ($0.name?.localizedCaseInsensitiveContains(searchText) ?? false) ||
+                ($0.productDescription?.localizedCaseInsensitiveContains(searchText) ?? false)
+            }
+        }
+    }
 
     var body: some View {
         NavigationView {
             VStack(alignment: .leading, spacing: 10) {
-                if products.indices.contains(currentIndex) {
-                    let currentProduct = products[currentIndex]
+                TextField("Search by name or description", text: $searchText)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.bottom, 10)
 
-                    Text("**\(currentProduct.name ?? "Unknown Product")**")
+                if filteredProducts.indices.contains(currentIndex) {
+                    let product = filteredProducts[currentIndex]
+                    Text("**\(product.name ?? "Unknown Product")**")
                         .font(.title)
-
-                    Text(currentProduct.productDescription ?? "No description available")
-
-                    Text("Price: $\(currentProduct.price ?? "-")")
-
-                    Text("Provider: \(currentProduct.provider ?? "Unknown")")
+                    Text(product.productDescription ?? "No description available")
+                    Text("Price: $\(product.price ?? "-")")
+                    Text("Provider: \(product.provider ?? "Unknown")")
                 } else {
                     Text("No products found.")
                         .foregroundColor(.gray)
                 }
+
+                Spacer()
 
                 HStack {
                     Button("Previous") {
@@ -50,17 +64,19 @@ struct ContentView: View {
                     Spacer()
 
                     Button("Next") {
-                        if currentIndex < products.count - 1 {
+                        if currentIndex < filteredProducts.count - 1 {
                             currentIndex += 1
                         }
                     }
-                    .disabled(currentIndex >= products.count - 1)
+                    .disabled(currentIndex >= filteredProducts.count - 1)
                 }
                 .padding(.top, 20)
             }
             .padding()
-            .navigationTitle("Product Browser")
+            .navigationTitle("Browse Products")
+            .onChange(of: searchText) { _ in
+                currentIndex = 0 // reset navigation when search changes
+            }
         }
     }
 }
-
