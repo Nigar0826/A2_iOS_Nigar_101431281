@@ -33,5 +33,36 @@ struct PersistenceController {
             }
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
+        let viewContext = container.viewContext
+
+        let fetchRequest: NSFetchRequest<ProductEntity> = ProductEntity.fetchRequest()
+
+        do {
+            let count = try viewContext.count(for: fetchRequest)
+            if count == 0 {
+                let sampleProducts = [
+                    ("MacBook Air M2", "Lightweight Apple laptop with M2 chip", 1299.99, "Apple"),
+                    ("MacBook Pro 16", "High-performance laptop with M3 Pro chip", 2499.99, "Apple"),
+                    ("iPhone 15 Pro Max", "Flagship iPhone with triple camera system", 1599.99, "Apple"),
+                    ("iPad Air", "Ultra-light tablet with M1 chip", 899.99, "Apple"),
+                    ("Apple Watch Ultra", "Rugged smartwatch with advanced sensors", 1099.99, "Apple"),
+                ]
+
+                for (name, description, price, provider) in sampleProducts {
+                    let product = ProductEntity(context: viewContext)
+                    product.id = UUID()
+                    product.name = name
+                    product.productDescription = description
+                    product.price = String(format: "%.2f", price)
+                    product.provider = provider
+                }
+
+                try viewContext.save()
+            }
+        } catch {
+            print("Error inserting sample products: \(error.localizedDescription)")
+        }
+
     }
+        
 }
