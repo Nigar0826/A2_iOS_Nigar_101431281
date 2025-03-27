@@ -131,7 +131,8 @@ struct ContentView: View {
                 .padding(.horizontal)
             }
             .padding(.top)
-            .navigationTitle("Browse Products")
+            .navigationTitle("Product Viewer")
+            .padding(.top, 20)
             .onChange(of: searchText) { _ in
                 currentIndex = 0 // reset index on search
             }
