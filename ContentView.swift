@@ -8,9 +8,11 @@
 import SwiftUI
 import CoreData
 
+// Main Content View - Displays product details, navigation buttons, and search functionality.
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
+    // Fetch request to get products from Core Data, sorted by name
     @FetchRequest(
         entity: ProductEntity.entity(),
         sortDescriptors: [NSSortDescriptor(keyPath: \ProductEntity.name, ascending: true)],
@@ -18,9 +20,12 @@ struct ContentView: View {
     )
     private var products: FetchedResults<ProductEntity>
 
+    // Index of the currently displayed product
     @State private var currentIndex = 0
+    // Search text for filtering products
     @State private var searchText = ""
 
+    // Filtered product list based on search criteria
     private var filteredProducts: [ProductEntity] {
         if searchText.isEmpty {
             return Array(products)
@@ -61,7 +66,7 @@ struct ContentView: View {
                 }
                 .padding(.horizontal)
 
-                // 🔍 Search Bar
+                // 🔍 Search Bar to filter products by name or description
                 TextField("🔍 Search by name or description", text: $searchText)
                     .padding(12)
                     .background(Color(.systemGray6))
@@ -90,6 +95,7 @@ struct ContentView: View {
                     .shadow(color: .gray.opacity(0.3), radius: 5, x: 0, y: 2)
                     .padding(.horizontal)
                 } else {
+                    // Display message when no products are found
                     Text("No products found.")
                         .foregroundColor(.red)
                         .padding(.top, 20)
@@ -98,7 +104,7 @@ struct ContentView: View {
 
                 Spacer()
 
-                // Navigation Buttons
+                // Navigation Buttons for navigating between products
                 HStack {
                     Button(action: {
                         if currentIndex > 0 {
@@ -131,10 +137,10 @@ struct ContentView: View {
                 .padding(.horizontal)
             }
             .padding(.top)
-            .navigationTitle("Product Viewer")
+            .navigationTitle("Product Viewer") // Title for the main screen
             .padding(.top, 20)
             .onChange(of: searchText) { _ in
-                currentIndex = 0 // reset index on search
+                currentIndex = 0 // reset index on search change
             }
         }
     }

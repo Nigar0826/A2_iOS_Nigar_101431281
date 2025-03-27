@@ -8,7 +8,9 @@
 import SwiftUI
 import CoreData
 
+// ProductListView - Displays a list of all available products
 struct ProductListView: View {
+    // Fetch all products from Core Data with sorting by name
     @FetchRequest(
         entity: ProductEntity.entity(),
         sortDescriptors: [NSSortDescriptor(keyPath: \ProductEntity.name, ascending: true)],
@@ -22,15 +24,17 @@ struct ProductListView: View {
             Color(UIColor.systemGray5)
                 .edgesIgnoringSafeArea(.all)
 
+            // Scrollable Product List
             ScrollView {
                 VStack(alignment: .leading, spacing: 15) {
+                    // Title for Product List
                     Text("Product List")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .padding(.top, 20)
                         .padding(.leading, 15)
 
-                    // Styled product list with enhanced layout
+                    // Display each product in the list
                     ForEach(products) { product in
                         VStack(alignment: .leading, spacing: 10) {
                             // Product Name

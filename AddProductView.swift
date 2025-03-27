@@ -7,10 +7,14 @@
 
 import SwiftUI
 
+// AddProductView - View for adding a new product
 struct AddProductView: View {
+    // Access the managed object context for Core Data
     @Environment(\.managedObjectContext) private var viewContext
+    // Dismiss the view after saving the product
     @Environment(\.dismiss) private var dismiss
 
+    // State variables to hold user input for product fields
     @State private var name: String = ""
     @State private var description: String = ""
     @State private var price: String = ""
@@ -76,7 +80,7 @@ struct AddProductView: View {
         }
     }
 
-    // Save Product Logic (Functionality Unchanged)
+    // Save Product Logic
     private func saveProduct() {
         let newProduct = ProductEntity(context: viewContext)
         newProduct.id = UUID()
@@ -85,9 +89,10 @@ struct AddProductView: View {
         newProduct.price = price
         newProduct.provider = provider
 
+        // Save the product to Core Data
         do {
             try viewContext.save()
-            dismiss()
+            dismiss() // Dismiss the view after saving
         } catch {
             print("Failed to save product: \(error)")
         }
