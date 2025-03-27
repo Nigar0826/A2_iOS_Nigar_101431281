@@ -35,13 +35,24 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading, spacing: 10) {
-                // 🔹 Add Product Button
+                // Add Product Button
                 NavigationLink(destination: AddProductView()) {
-                    Text("➕ Add New Product")
+                    Text("Add New Product")
                         .font(.headline)
                         .padding(8)
                         .frame(maxWidth: .infinity)
                         .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+
+                // View All Products Button
+                NavigationLink(destination: ProductListView()) {
+                    Text("View All Products")
+                        .font(.headline)
+                        .padding(8)
+                        .frame(maxWidth: .infinity)
+                        .background(Color.green)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
@@ -51,7 +62,7 @@ struct ContentView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.vertical, 10)
 
-                // 📦 Product Details
+                // Product Details
                 if filteredProducts.indices.contains(currentIndex) {
                     let product = filteredProducts[currentIndex]
                     Text("**\(product.name ?? "Unknown Product")**")
@@ -66,7 +77,7 @@ struct ContentView: View {
 
                 Spacer()
 
-                // 🔄 Navigation Buttons
+                // Navigation Buttons
                 HStack {
                     Button("Previous") {
                         if currentIndex > 0 {
