@@ -35,10 +35,23 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading, spacing: 10) {
+                // 🔹 Add Product Button
+                NavigationLink(destination: AddProductView()) {
+                    Text("➕ Add New Product")
+                        .font(.headline)
+                        .padding(8)
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+
+                // 🔍 Search
                 TextField("Search by name or description", text: $searchText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.bottom, 10)
+                    .padding(.vertical, 10)
 
+                // 📦 Product Details
                 if filteredProducts.indices.contains(currentIndex) {
                     let product = filteredProducts[currentIndex]
                     Text("**\(product.name ?? "Unknown Product")**")
@@ -53,6 +66,7 @@ struct ContentView: View {
 
                 Spacer()
 
+                // 🔄 Navigation Buttons
                 HStack {
                     Button("Previous") {
                         if currentIndex > 0 {
@@ -75,7 +89,7 @@ struct ContentView: View {
             .padding()
             .navigationTitle("Browse Products")
             .onChange(of: searchText) { _ in
-                currentIndex = 0 // reset navigation when search changes
+                currentIndex = 0 // reset when search changes
             }
         }
     }
